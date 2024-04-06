@@ -1,0 +1,509 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39/"
+     xml:base="http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:untitled-ontology-39="http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#has_mission -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#has_mission">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#is_mission_of"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#drone"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#mission"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#is_manufactured_by -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#is_manufactured_by">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#manufactures"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#drone"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#manufacturer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#is_mission_of -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#is_mission_of">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#mission"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#drone"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#landing_station -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#landing_station">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#mission"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#mission"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#manufactures -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#manufactures">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#manufacturer"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#drone"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#take_off_station -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#take_off_station">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#mission"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#station"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#drones_capacity -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#drones_capacity">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#station"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#has_flight_number -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#has_flight_number">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#mission"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#has_mission_id -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#has_mission_id">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#mission"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#mission_distance_covered -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#mission_distance_covered">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#mission"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Distance covered in meters</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#model_endurance -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#model_endurance">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#drone"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#model_max_payload -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#model_max_payload">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#drone"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#model_max_speed -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#model_max_speed">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#drone"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#model_mtow -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#model_mtow">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#drone"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#model_name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#model_name">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#drone"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#model_range -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#model_range">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#drone"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#model_speed -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#model_speed">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#drone"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#station_location -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#station_location">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#station"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#autonomous -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#autonomous">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#mission"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#b_v_l_o_s"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#remote_guided"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#b_v_l_o_s -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#b_v_l_o_s">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#mission"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#remote_guided"/>
+        <rdfs:comment>BVLOS stands for Beyond Visual Line of Sight, VLOS for Visual Line of Sight, and EVLOS for Extended Visual Line of Sight. BVLOS means you (the operator) are flying your drone out of sight range. With VLOS and EVLOS, you can see your drone as you fly.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#drone -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#drone"/>
+    
+
+
+    <!-- http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#fixed-wing -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#fixed-wing">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#drone"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#manufacturer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#manufacturer"/>
+    
+
+
+    <!-- http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#mission -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#mission"/>
+    
+
+
+    <!-- http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#multi-rotor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#multi-rotor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#drone"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#remote_guided -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#remote_guided">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#mission"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#single-rotor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#single-rotor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#drone"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#station -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#station"/>
+    
+
+
+    <!-- http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#vtol -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#vtol">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#drone"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#Aerovironment -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#Aerovironment">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#manufacturer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#Beyond_Visual_Line_of_Sight_Mission -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#Beyond_Visual_Line_of_Sight_Mission">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#b_v_l_o_s"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#DJI -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#DJI">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#manufacturer"/>
+        <untitled-ontology-39:manufactures rdf:resource="http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#model_1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#DeltaQuad -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#DeltaQuad">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#manufacturer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#Prodrone -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#Prodrone">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#manufacturer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#PteroDynamics -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#PteroDynamics">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#manufacturer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#autonomous_mission -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#autonomous_mission">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#autonomous"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#mission_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#mission_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#mission"/>
+        <untitled-ontology-39:landing_station rdf:resource="http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#station_1"/>
+        <untitled-ontology-39:take_off_station rdf:resource="http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#station_1"/>
+        <untitled-ontology-39:has_flight_number rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">001</untitled-ontology-39:has_flight_number>
+        <untitled-ontology-39:has_mission_id>mis001</untitled-ontology-39:has_mission_id>
+        <untitled-ontology-39:mission_distance_covered rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1000</untitled-ontology-39:mission_distance_covered>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#model_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#model_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#fixed-wing"/>
+        <untitled-ontology-39:has_mission rdf:resource="http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#mission_1"/>
+        <untitled-ontology-39:is_manufactured_by rdf:resource="http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#Aerovironment"/>
+        <untitled-ontology-39:model_endurance rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1440</untitled-ontology-39:model_endurance>
+        <untitled-ontology-39:model_max_payload rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">22.7</untitled-ontology-39:model_max_payload>
+        <untitled-ontology-39:model_max_speed rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">93.34</untitled-ontology-39:model_max_speed>
+        <untitled-ontology-39:model_mtow rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">102</untitled-ontology-39:model_mtow>
+        <untitled-ontology-39:model_name>T-20</untitled-ontology-39:model_name>
+        <untitled-ontology-39:model_range rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">185</untitled-ontology-39:model_range>
+        <untitled-ontology-39:model_speed rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">93.34</untitled-ontology-39:model_speed>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#model_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#model_2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#vtol"/>
+        <untitled-ontology-39:is_manufactured_by rdf:resource="http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#DeltaQuad"/>
+        <untitled-ontology-39:model_endurance rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">110</untitled-ontology-39:model_endurance>
+        <untitled-ontology-39:model_max_payload rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.2</untitled-ontology-39:model_max_payload>
+        <untitled-ontology-39:model_max_speed rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">90</untitled-ontology-39:model_max_speed>
+        <untitled-ontology-39:model_mtow rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6.2</untitled-ontology-39:model_mtow>
+        <untitled-ontology-39:model_name>Pro #CARGO</untitled-ontology-39:model_name>
+        <untitled-ontology-39:model_range rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">100</untitled-ontology-39:model_range>
+        <untitled-ontology-39:model_speed rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">60</untitled-ontology-39:model_speed>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#model_3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#model_3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#single-rotor"/>
+        <untitled-ontology-39:is_manufactured_by rdf:resource="http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#Prodrone"/>
+        <untitled-ontology-39:model_endurance rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">150</untitled-ontology-39:model_endurance>
+        <untitled-ontology-39:model_max_payload rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">15</untitled-ontology-39:model_max_payload>
+        <untitled-ontology-39:model_max_speed rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">100</untitled-ontology-39:model_max_speed>
+        <untitled-ontology-39:model_mtow rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">35</untitled-ontology-39:model_mtow>
+        <untitled-ontology-39:model_name>PDH-GS120</untitled-ontology-39:model_name>
+        <untitled-ontology-39:model_range rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">175</untitled-ontology-39:model_range>
+        <untitled-ontology-39:model_speed rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">70</untitled-ontology-39:model_speed>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#model_4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#model_4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#multi-rotor"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#vtol"/>
+        <untitled-ontology-39:is_manufactured_by rdf:resource="http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#PteroDynamics"/>
+        <untitled-ontology-39:model_endurance rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">60</untitled-ontology-39:model_endurance>
+        <untitled-ontology-39:model_max_payload rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">7</untitled-ontology-39:model_max_payload>
+        <untitled-ontology-39:model_max_speed rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">185</untitled-ontology-39:model_max_speed>
+        <untitled-ontology-39:model_mtow rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">38</untitled-ontology-39:model_mtow>
+        <untitled-ontology-39:model_name>X-P4</untitled-ontology-39:model_name>
+        <untitled-ontology-39:model_range rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">111.12</untitled-ontology-39:model_range>
+        <untitled-ontology-39:model_speed rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">82.8</untitled-ontology-39:model_speed>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#model_5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#model_5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#multi-rotor"/>
+        <untitled-ontology-39:is_manufactured_by rdf:resource="http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#DJI"/>
+        <untitled-ontology-39:model_endurance rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">55</untitled-ontology-39:model_endurance>
+        <untitled-ontology-39:model_max_payload rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.7</untitled-ontology-39:model_max_payload>
+        <untitled-ontology-39:model_max_speed rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">82.8</untitled-ontology-39:model_max_speed>
+        <untitled-ontology-39:model_mtow rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9</untitled-ontology-39:model_mtow>
+        <untitled-ontology-39:model_name>Matrice 300 RTK</untitled-ontology-39:model_name>
+        <untitled-ontology-39:model_range rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">75.9</untitled-ontology-39:model_range>
+        <untitled-ontology-39:model_speed rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">82.8</untitled-ontology-39:model_speed>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#remote_pilot_mission -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#remote_pilot_mission">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#remote_guided"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#station_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#station_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#station"/>
+        <untitled-ontology-39:drones_capacity>5</untitled-ontology-39:drones_capacity>
+        <untitled-ontology-39:station_location>London</untitled-ontology-39:station_location>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#station_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#station_2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#station"/>
+        <untitled-ontology-39:drones_capacity>10</untitled-ontology-39:drones_capacity>
+        <untitled-ontology-39:station_location>London</untitled-ontology-39:station_location>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#drone"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#multi-rotor"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#single-rotor"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/zisislelekis/ontologies/2023/10/untitled-ontology-39#vtol"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi -->
+
