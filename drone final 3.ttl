@@ -1,0 +1,831 @@
+# baseURI: http://example.org/drone
+# imports: http://www.w3.org/2003/01/geo/wgs84_pos
+# imports: https://www.w3.org/2006/time
+# prefix: drone
+
+@prefix drone: <http://example.org/drone#> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix spin: <http://spinrdf.org/spin#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/drone>
+  rdf:type owl:Ontology ;
+  spin:imports <http://topbraid.org/spin/rdfsplus> ;
+  owl:imports <http://www.w3.org/2003/01/geo/wgs84_pos> ;
+  owl:imports <https://www.w3.org/2006/time> ;
+  owl:versionInfo "Created with TopBraid Composer" ;
+.
+drone:Autonomous
+  rdf:type rdfs:Class ;
+  rdfs:subClassOf drone:Mission ;
+.
+drone:BeyondVisualLineOfSight
+  rdf:type rdfs:Class ;
+  rdfs:subClassOf drone:Mission ;
+.
+drone:BloodPressure
+  rdf:type rdfs:Class ;
+  rdfs:subClassOf drone:HealthRecord ;
+.
+drone:BloodPressure_1
+  rdf:type drone:BloodPressure ;
+  drone:bloodPressureData 120 ;
+  drone:healthRecordCollectedFromMission drone:Mission_1 ;
+  drone:healthRecordPersonExamined drone:Person_1 ;
+.
+drone:BloodPressure_2
+  rdf:type drone:BloodPressure ;
+  drone:bloodPressureData 120 ;
+  drone:healthRecordCollectedFromMission drone:Mission_2 ;
+  drone:healthRecordPersonExamined drone:Person_10 ;
+.
+drone:BloodPressure_3
+  rdf:type drone:BloodPressure ;
+  drone:bloodPressureData 130 ;
+  drone:healthRecordCollectedFromMission drone:Mission_4 ;
+  drone:healthRecordPersonExamined drone:Person_11 ;
+.
+drone:BloodPressure_4
+  rdf:type drone:BloodPressure ;
+  drone:bloodPressureData 150 ;
+  drone:healthRecordCollectedFromMission drone:Mission_4 ;
+  drone:healthRecordPersonExamined drone:Person_9 ;
+.
+drone:BloodPressure_5
+  rdf:type drone:BloodPressure ;
+  drone:bloodPressureData 80 ;
+  drone:healthRecordCollectedFromMission drone:Mission_5 ;
+.
+drone:Business
+  rdf:type rdfs:Class ;
+  rdfs:subClassOf owl:Thing ;
+.
+drone:Business_1
+  rdf:type drone:FlightOperator ;
+  drone:businessCity drone:City_1 ;
+  drone:businessName "Zipline" ;
+.
+drone:Business_10
+  rdf:type drone:FlightOperator ;
+  drone:businessCity drone:City_2 ;
+  drone:businessName "Dedrone" ;
+.
+drone:Business_2
+  rdf:type drone:FlightOperator ;
+  drone:businessCity drone:City_3 ;
+  drone:businessName "Amazon" ;
+.
+drone:Business_3
+  rdf:type drone:FlightOperator ;
+  drone:businessCity drone:City_1 ;
+  drone:businessName "Wing" ;
+.
+drone:Business_4
+  rdf:type drone:DroneManufacturer ;
+  drone:businessCity drone:City_1 ;
+  drone:businessName "Prodrone" ;
+  drone:manufactures drone:Model_1 ;
+.
+drone:Business_5
+  rdf:type drone:DroneManufacturer ;
+  drone:businessCity drone:City_1 ;
+  drone:businessName "PteroDynamics" ;
+  drone:manufactures drone:Model_2 ;
+.
+drone:Business_6
+  rdf:type drone:DroneManufacturer ;
+  drone:businessCity drone:City_3 ;
+  drone:businessName "Aeronvironment" ;
+  drone:manufactures drone:Model_3 ;
+.
+drone:Business_7
+  rdf:type drone:DroneManufacturer ;
+  drone:businessCity drone:City_2 ;
+  drone:businessName "DeltaQuad" ;
+  drone:manufactures drone:Model_4 ;
+.
+drone:Business_8
+  rdf:type drone:DroneManufacturer ;
+  drone:businessCity drone:City_3 ;
+  drone:businessName "DJI" ;
+  drone:manufactures drone:Model_5 ;
+.
+drone:Business_9
+  rdf:type drone:FlightOperator ;
+  drone:businessCity drone:City_2 ;
+  drone:businessName "Corvus Robotics" ;
+.
+drone:City
+  rdf:type rdfs:Class ;
+  rdfs:subClassOf drone:GeographicalLocation ;
+.
+drone:City_1
+  rdf:type drone:City ;
+  drone:cityCountry drone:Country_1 ;
+  drone:cityGeographicalArea 123317 ;
+  drone:cityPopulation 1754754 ;
+  drone:cityPopulationDensity 14.2 ;
+  drone:locationName "Durango" ;
+  rdfs:comment "in km2" ;
+.
+drone:City_2
+  rdf:type drone:City ;
+  drone:cityCountry drone:Country_2 ;
+  drone:cityGeographicalArea 121 ;
+  drone:cityPopulation 4000000 ;
+  drone:cityPopulationDensity "3206"^^xsd:decimal ;
+  drone:locationName "Los Angeles" ;
+.
+drone:City_3
+  rdf:type drone:City ;
+  drone:cityCountry drone:Country_2 ;
+  drone:cityGeographicalArea 200000 ;
+  drone:cityPopulation 2000000 ;
+  drone:cityPopulationDensity "1000"^^xsd:decimal ;
+  drone:locationName "San Fransisco" ;
+.
+drone:City_4
+  rdf:type drone:City ;
+  drone:cityCountry drone:Country_4 ;
+  drone:cityGeographicalArea 7786 ;
+  drone:cityPopulation 347000 ;
+  drone:cityPopulationDensity "6455"^^xsd:decimal ;
+  drone:locationName "San Jose" ;
+.
+drone:City_5
+  rdf:type drone:City ;
+  drone:cityCountry drone:Country_5 ;
+  drone:cityGeographicalArea 100 ;
+  drone:cityPopulation 477000 ;
+  drone:cityPopulationDensity "520"^^xsd:decimal ;
+  drone:locationName "Panama City" ;
+.
+drone:Country
+  rdf:type rdfs:Class ;
+  rdfs:subClassOf drone:GeographicalLocation ;
+.
+drone:Country_1
+  rdf:type drone:Country ;
+  drone:locationName "Mexico" ;
+.
+drone:Country_2
+  rdf:type drone:Country ;
+  drone:locationName "United States" ;
+.
+drone:Country_3
+  rdf:type drone:Country ;
+  drone:locationName "Canada" ;
+.
+drone:Country_4
+  rdf:type drone:Country ;
+  drone:locationName "Costa Rica" ;
+.
+drone:Country_5
+  rdf:type drone:Country ;
+  drone:locationName "Panama" ;
+.
+drone:Doctor
+  rdf:type rdfs:Class ;
+  rdfs:subClassOf drone:Person ;
+.
+drone:Drone
+  rdf:type rdfs:Class ;
+  rdfs:comment "test 1" ;
+  rdfs:subClassOf owl:Thing ;
+.
+drone:DroneManufacturer
+  rdf:type rdfs:Class ;
+  rdfs:subClassOf drone:Business ;
+.
+drone:DurationDescription_1
+  rdf:type time:DurationDescription ;
+.
+drone:Duration_1
+  rdf:type time:Duration ;
+  time:numericDuration "30"^^xsd:decimal ;
+  time:unitType time:unitMinute ;
+.
+drone:Duration_2
+  rdf:type time:Duration ;
+  time:numericDuration "25"^^xsd:decimal ;
+  time:unitType time:unitMinute ;
+.
+drone:Duration_3
+  rdf:type time:Duration ;
+  time:numericDuration "20"^^xsd:decimal ;
+  time:unitType time:unitMinute ;
+.
+drone:Duration_4
+  rdf:type time:Duration ;
+  time:numericDuration "35"^^xsd:decimal ;
+  time:unitType time:unitMinute ;
+.
+drone:Duration_5
+  rdf:type time:Duration ;
+  time:numericDuration "29"^^xsd:decimal ;
+  time:unitType time:unitMinute ;
+.
+drone:Female
+  rdf:type drone:Gender ;
+.
+drone:FixedWing
+  rdf:type rdfs:Class ;
+  rdfs:subClassOf drone:Drone ;
+.
+drone:FlightOperator
+  rdf:type rdfs:Class ;
+  rdfs:subClassOf drone:Business ;
+.
+drone:Gender
+  rdf:type rdfs:Class ;
+  rdfs:subClassOf owl:Thing ;
+.
+drone:GeographicalLocation
+  rdf:type rdfs:Class ;
+  rdfs:subClassOf owl:Thing ;
+.
+drone:HealthRecord
+  rdf:type rdfs:Class ;
+  rdfs:subClassOf owl:Thing ;
+.
+drone:Male
+  rdf:type drone:Gender ;
+.
+drone:Mission
+  rdf:type rdfs:Class ;
+  rdfs:subClassOf owl:Thing ;
+.
+drone:Mission_1
+  rdf:type drone:Autonomous ;
+  drone:missionDistanceCovered 20 ;
+  drone:missionDuration drone:Duration_1 ;
+  drone:missionLandingStation drone:Station_1 ;
+  drone:missionModelUsed drone:Model_1 ;
+  drone:missionOperator drone:Person_2 ;
+  drone:missionTakeOffStation drone:Station_1 ;
+.
+drone:Mission_2
+  rdf:type drone:BeyondVisualLineOfSight ;
+  drone:missionDistanceCovered 27 ;
+  drone:missionDuration drone:Duration_2 ;
+  drone:missionLandingStation drone:Station_2 ;
+  drone:missionModelUsed drone:Model_2 ;
+  drone:missionTakeOffStation drone:Station_2 ;
+.
+drone:Mission_3
+  rdf:type drone:RemoteGuided ;
+  drone:missionDistanceCovered 30 ;
+  drone:missionDuration drone:Duration_3 ;
+  drone:missionLandingStation drone:Station_3 ;
+  drone:missionModelUsed drone:Model_3 ;
+  drone:missionTakeOffStation drone:Station_3 ;
+.
+drone:Mission_4
+  rdf:type drone:RemoteGuided ;
+  drone:missionDistanceCovered 30 ;
+  drone:missionDuration drone:Duration_4 ;
+  drone:missionLandingStation drone:Station_1 ;
+  drone:missionModelUsed drone:Model_3 ;
+  drone:missionOperator drone:Person_14 ;
+  drone:missionTakeOffStation drone:Station_3 ;
+.
+drone:Mission_5
+  rdf:type drone:RemoteGuided ;
+  drone:missionDistanceCovered 40 ;
+  drone:missionDuration drone:Duration_5 ;
+  drone:missionLandingStation drone:Station_3 ;
+  drone:missionModelUsed drone:Model_3 ;
+  drone:missionOperator drone:Person_5 ;
+  drone:missionTakeOffStation drone:Station_1 ;
+.
+drone:Model_1
+  rdf:type drone:SingleRotor ;
+  drone:droneEndurance 150 ;
+  drone:droneMaxPayload 15 ;
+  drone:droneMaxSpeed 100 ;
+  drone:droneMaxTakeOffWeight 35 ;
+  drone:droneName "PDH-GS120" ;
+  drone:droneRange 175 ;
+  drone:droneSpeed 70 ;
+  rdfs:comment "Test 1" ;
+.
+drone:Model_2
+  rdf:type drone:MultiRotor ;
+  rdf:type drone:VTOL ;
+  drone:droneEndurance 60 ;
+  drone:droneMaxPayload 7 ;
+  drone:droneMaxSpeed 185 ;
+  drone:droneMaxTakeOffWeight 38 ;
+  drone:droneName "X-P4" ;
+  drone:droneRange 111 ;
+  drone:droneSpeed 111 ;
+.
+drone:Model_3
+  rdf:type drone:FixedWing ;
+  drone:droneEndurance 1440 ;
+  drone:droneMaxPayload 23 ;
+  drone:droneMaxSpeed 93 ;
+  drone:droneMaxTakeOffWeight 102 ;
+  drone:droneName "T-20" ;
+  drone:droneRange 185 ;
+  drone:droneSpeed 93 ;
+.
+drone:Model_4
+  rdf:type drone:VTOL ;
+  drone:droneEndurance 110 ;
+  drone:droneMaxPayload 1 ;
+  drone:droneMaxSpeed 90 ;
+  drone:droneMaxTakeOffWeight 6 ;
+  drone:droneName "Pro #CARGO" ;
+  drone:droneRange 100 ;
+  drone:droneSpeed 60 ;
+.
+drone:Model_5
+  rdf:type drone:MultiRotor ;
+  drone:droneEndurance 55 ;
+  drone:droneMaxPayload 3 ;
+  drone:droneMaxSpeed 83 ;
+  drone:droneMaxTakeOffWeight 9 ;
+  drone:droneName "Matrice 300 RTK" ;
+  drone:droneRange 76 ;
+  drone:droneSpeed 83 ;
+.
+drone:MultiRotor
+  rdf:type rdfs:Class ;
+  rdfs:subClassOf drone:Drone ;
+.
+drone:Operator
+  rdf:type rdfs:Class ;
+  rdfs:subClassOf drone:Person ;
+.
+drone:Other
+  rdf:type drone:Gender ;
+.
+drone:OxygenSaturation
+  rdf:type rdfs:Class ;
+  rdfs:subClassOf drone:HealthRecord ;
+.
+drone:OxygenSaturation_1
+  rdf:type drone:OxygenSaturation ;
+  drone:healthRecordCollectedFromMission drone:Mission_1 ;
+  drone:healthRecordPersonExamined drone:Person_1 ;
+  drone:oxygenSaturationData 98 ;
+.
+drone:OxygenSaturation_2
+  rdf:type drone:OxygenSaturation ;
+  drone:healthRecordCollectedFromMission drone:Mission_2 ;
+  drone:healthRecordPersonExamined drone:Person_12 ;
+  drone:oxygenSaturationData 100 ;
+.
+drone:OxygenSaturation_3
+  rdf:type drone:OxygenSaturation ;
+  drone:healthRecordCollectedFromMission drone:Mission_3 ;
+  drone:healthRecordPersonExamined drone:Person_12 ;
+  drone:oxygenSaturationData 97 ;
+.
+drone:OxygenSaturation_4
+  rdf:type drone:OxygenSaturation ;
+  drone:healthRecordCollectedFromMission drone:Mission_4 ;
+  drone:healthRecordPersonExamined drone:Person_15 ;
+  drone:oxygenSaturationData 96 ;
+.
+drone:OxygenSaturation_5
+  rdf:type drone:OxygenSaturation ;
+  drone:healthRecordCollectedFromMission drone:Mission_5 ;
+  drone:healthRecordPersonExamined drone:Person_7 ;
+  drone:oxygenSaturationData 95 ;
+.
+drone:Patient
+  rdf:type rdfs:Class ;
+  rdfs:subClassOf drone:Person ;
+.
+drone:Person
+  rdf:type rdfs:Class ;
+  rdfs:subClassOf owl:Thing ;
+.
+drone:Person_1
+  rdf:type drone:Patient ;
+  drone:personAge 25 ;
+  drone:personGender drone:Male ;
+  drone:personID 0001 ;
+  drone:personName "Jack" ;
+  drone:personSurname "Harlow" ;
+.
+drone:Person_10
+  rdf:type drone:Patient ;
+  drone:personAge 36 ;
+  drone:personGender drone:Female ;
+  drone:personID 0010 ;
+  drone:personName "Selena" ;
+  drone:personSurname "Ravij" ;
+.
+drone:Person_11
+  rdf:type drone:Patient ;
+  drone:personAge 18 ;
+  drone:personGender drone:Other ;
+  drone:personID 0011 ;
+  drone:personName "Veronica" ;
+  drone:personSurname "Stewart" ;
+.
+drone:Person_12
+  rdf:type drone:Patient ;
+  drone:personAge 5 ;
+  drone:personGender drone:Female ;
+  drone:personID 0012 ;
+  drone:personName "Jared" ;
+  drone:personSurname "Smith" ;
+.
+drone:Person_13
+  rdf:type drone:Doctor ;
+  drone:personAge 62 ;
+  drone:personGender drone:Male ;
+  drone:personID 0013 ;
+  drone:personName "Taylor" ;
+  drone:personSurname "Lambert" ;
+.
+drone:Person_14
+  rdf:type drone:Operator ;
+  drone:personAge 34 ;
+  drone:personGender drone:Female ;
+  drone:personID 0014 ;
+  drone:personName "George" ;
+  drone:personSurname "Vicram" ;
+.
+drone:Person_15
+  rdf:type drone:Patient ;
+  drone:personAge 56 ;
+  drone:personGender drone:Female ;
+  drone:personID 0015 ;
+  drone:personName "Victor" ;
+  drone:personSurname "Kram" ;
+.
+drone:Person_2
+  rdf:type drone:Operator ;
+  drone:personAge 30 ;
+  drone:personGender drone:Male ;
+  drone:personID 0002 ;
+  drone:personName "Jenny" ;
+  drone:personSurname "Eugenia" ;
+.
+drone:Person_3
+  rdf:type drone:Pharmacist ;
+  drone:personAge 35 ;
+  drone:personGender drone:Female ;
+  drone:personID 0003 ;
+  drone:personName "Katherine" ;
+  drone:personSurname "Owl" ;
+.
+drone:Person_4
+  rdf:type drone:Doctor ;
+  drone:personAge 24 ;
+  drone:personGender drone:Male ;
+  drone:personID 0004 ;
+  drone:personName "Robert" ;
+  drone:personSurname "Johnson" ;
+.
+drone:Person_5
+  rdf:type drone:Operator ;
+  drone:personAge 35 ;
+  drone:personGender drone:Other ;
+  drone:personID 0005 ;
+  drone:personName "Sam" ;
+  drone:personSurname "Smith" ;
+.
+drone:Person_6
+  rdf:type drone:Doctor ;
+  drone:personAge 45 ;
+  drone:personGender drone:Female ;
+  drone:personID 0006 ;
+  drone:personName "Michelle" ;
+  drone:personSurname "Frank" ;
+.
+drone:Person_7
+  rdf:type drone:Patient ;
+  drone:personAge 58 ;
+  drone:personGender drone:Female ;
+  drone:personID 0007 ;
+  drone:personName "Janet" ;
+  drone:personSurname "Newton" ;
+.
+drone:Person_8
+  rdf:type drone:Pharmacist ;
+  drone:personAge 42 ;
+  drone:personGender drone:Male ;
+  drone:personID 0008 ;
+  drone:personName "John" ;
+  drone:personSurname "Smith" ;
+.
+drone:Person_9
+  rdf:type drone:Patient ;
+  drone:personAge 35 ;
+  drone:personGender drone:Male ;
+  drone:personID 0009 ;
+  drone:personName "Olive" ;
+  drone:personSurname "Orange" ;
+.
+drone:Pharmacist
+  rdf:type rdfs:Class ;
+  rdfs:subClassOf drone:Person ;
+.
+drone:Point_1
+  rdf:type geo:Point ;
+  geo:lat "40.712776" ;
+  geo:long "-74.005974" ;
+.
+drone:Point_2
+  rdf:type geo:Point ;
+  geo:lat "40.712776" ;
+  geo:long "-74.005974" ;
+.
+drone:Point_3
+  rdf:type geo:Point ;
+  geo:lat "40.712776" ;
+  geo:long "-74.005974" ;
+.
+drone:Pulse
+  rdf:type rdfs:Class ;
+  rdfs:subClassOf drone:HealthRecord ;
+.
+drone:Pulse_1
+  rdf:type drone:Pulse ;
+  drone:healthRecordCollectedFromMission drone:Mission_1 ;
+  drone:healthRecordPersonExamined drone:Person_1 ;
+  drone:pulseData 100 ;
+.
+drone:Pulse_2
+  rdf:type drone:Pulse ;
+  drone:healthRecordCollectedFromMission drone:Mission_2 ;
+  drone:healthRecordPersonExamined drone:Person_11 ;
+  drone:pulseData 95 ;
+.
+drone:Pulse_3
+  rdf:type drone:Pulse ;
+  drone:healthRecordCollectedFromMission drone:Mission_3 ;
+  drone:healthRecordPersonExamined drone:Person_9 ;
+  drone:pulseData 98 ;
+.
+drone:Pulse_4
+  rdf:type drone:Pulse ;
+  drone:healthRecordCollectedFromMission drone:Mission_4 ;
+  drone:healthRecordPersonExamined drone:Person_15 ;
+.
+drone:RemoteGuided
+  rdf:type rdfs:Class ;
+  rdfs:subClassOf drone:Mission ;
+.
+drone:SingleRotor
+  rdf:type rdfs:Class ;
+  rdfs:subClassOf drone:Drone ;
+.
+drone:Station
+  rdf:type rdfs:Class ;
+  rdfs:subClassOf owl:Thing ;
+.
+drone:StationWithRunway
+  rdf:type rdfs:Class ;
+  rdfs:subClassOf drone:Station ;
+.
+drone:StationWithVerticalLandingSpots
+  rdf:type rdfs:Class ;
+  rdfs:subClassOf drone:Station ;
+.
+drone:Station_1
+  rdf:type drone:StationWithRunway ;
+  drone:canHostDroneType drone:FixedWing ;
+  drone:canHostDroneType drone:VTOL ;
+  drone:stationCity drone:City_1 ;
+  drone:stationLocation drone:Point_1 ;
+  drone:stationNumberOfRunways 2 ;
+  drone:stationOwner drone:Business_1 ;
+.
+drone:Station_2
+  rdf:type drone:StationWithVerticalLandingSpots ;
+  drone:canHostDroneType drone:MultiRotor ;
+  drone:canHostDroneType drone:SingleRotor ;
+  drone:canHostDroneType drone:VTOL ;
+  drone:stationCity drone:City_2 ;
+  drone:stationLocation drone:Point_2 ;
+  drone:stationNumberOfVerticalLandingSpots 4 ;
+  drone:stationOwner drone:Business_2 ;
+.
+drone:Station_3
+  rdf:type drone:StationWithRunway ;
+  rdf:type drone:StationWithVerticalLandingSpots ;
+  drone:canHostDroneType drone:FixedWing ;
+  drone:canHostDroneType drone:MultiRotor ;
+  drone:canHostDroneType drone:SingleRotor ;
+  drone:canHostDroneType drone:VTOL ;
+  drone:stationCity drone:City_3 ;
+  drone:stationLocation drone:Point_3 ;
+  drone:stationNumberOfRunways 1 ;
+  drone:stationNumberOfVerticalLandingSpots 1 ;
+  drone:stationOwner drone:Business_3 ;
+.
+drone:Temperature
+  rdf:type rdfs:Class ;
+  rdfs:subClassOf drone:HealthRecord ;
+.
+drone:Temperature_1
+  rdf:type drone:Temperature ;
+  drone:healthRecordCollectedFromMission drone:Mission_1 ;
+  drone:healthRecordPersonExamined drone:Person_1 ;
+  drone:temperatureData 36.6 ;
+.
+drone:VTOL
+  rdf:type rdfs:Class ;
+  rdfs:subClassOf drone:Drone ;
+.
+drone:bloodPressureData
+  rdf:type rdf:Property ;
+  rdfs:domain drone:BloodPressure ;
+  rdfs:range xsd:integer ;
+.
+drone:businessCity
+  rdf:type rdf:Property ;
+  rdfs:domain drone:Business ;
+  rdfs:range drone:City ;
+.
+drone:businessName
+  rdf:type rdf:Property ;
+  rdfs:domain drone:Business ;
+  rdfs:range xsd:string ;
+.
+drone:canHostDroneType
+  rdf:type rdf:Property ;
+  rdfs:domain drone:Station ;
+  rdfs:range drone:Drone ;
+.
+drone:cityCountry
+  rdf:type rdf:Property ;
+  rdfs:domain drone:City ;
+  rdfs:range drone:Country ;
+.
+drone:cityGeographicalArea
+  rdf:type rdf:Property ;
+  rdfs:domain drone:City ;
+  rdfs:range xsd:integer ;
+.
+drone:cityPopulation
+  rdf:type rdf:Property ;
+  rdfs:domain drone:City ;
+  rdfs:range xsd:integer ;
+.
+drone:cityPopulationDensity
+  rdf:type rdf:Property ;
+  rdfs:domain drone:City ;
+  rdfs:range xsd:decimal ;
+.
+drone:droneEndurance
+  rdf:type rdf:Property ;
+  rdfs:domain drone:Drone ;
+  rdfs:range xsd:integer ;
+.
+drone:droneMaxPayload
+  rdf:type rdf:Property ;
+  rdfs:domain drone:Drone ;
+  rdfs:range xsd:integer ;
+.
+drone:droneMaxSpeed
+  rdf:type rdf:Property ;
+  rdfs:domain drone:Drone ;
+  rdfs:range xsd:integer ;
+.
+drone:droneMaxTakeOffWeight
+  rdf:type rdf:Property ;
+  rdfs:domain drone:Drone ;
+  rdfs:range xsd:integer ;
+.
+drone:droneName
+  rdf:type rdf:Property ;
+  rdfs:domain drone:Drone ;
+  rdfs:range xsd:string ;
+.
+drone:droneRange
+  rdf:type rdf:Property ;
+  rdfs:domain drone:Drone ;
+  rdfs:range xsd:integer ;
+.
+drone:droneSpeed
+  rdf:type rdf:Property ;
+  rdfs:domain drone:Drone ;
+  rdfs:range xsd:integer ;
+.
+drone:healthRecordCollectedFromMission
+  rdf:type rdf:Property ;
+  rdfs:domain drone:HealthRecord ;
+  rdfs:range drone:Mission ;
+.
+drone:healthRecordPersonExamined
+  rdf:type rdf:Property ;
+  rdfs:domain drone:HealthRecord ;
+  rdfs:range drone:Person ;
+.
+drone:locationName
+  rdf:type rdf:Property ;
+  rdfs:domain drone:GeographicalLocation ;
+  rdfs:range xsd:string ;
+.
+drone:manufactures
+  rdf:type rdf:Property ;
+  rdfs:domain drone:DroneManufacturer ;
+  rdfs:range drone:Drone ;
+.
+drone:missionDistanceCovered
+  rdf:type rdf:Property ;
+  rdfs:domain drone:Mission ;
+  rdfs:range xsd:integer ;
+.
+drone:missionDuration
+  rdf:type rdf:Property ;
+  rdfs:domain drone:Mission ;
+  rdfs:range time:Duration ;
+.
+drone:missionLandingStation
+  rdf:type rdf:Property ;
+  rdfs:domain drone:Mission ;
+  rdfs:range drone:Station ;
+.
+drone:missionModelUsed
+  rdf:type rdf:Property ;
+  rdfs:domain drone:Mission ;
+  rdfs:range drone:Drone ;
+.
+drone:missionOperator
+  rdf:type rdf:Property ;
+  rdfs:domain drone:Mission ;
+  rdfs:range drone:Operator ;
+.
+drone:missionTakeOffStation
+  rdf:type rdf:Property ;
+  rdfs:domain drone:Mission ;
+  rdfs:range drone:Station ;
+.
+drone:oxygenSaturationData
+  rdf:type rdf:Property ;
+  rdfs:domain drone:OxygenSaturation ;
+  rdfs:range xsd:integer ;
+.
+drone:personAge
+  rdf:type rdf:Property ;
+  rdfs:domain drone:Person ;
+  rdfs:range xsd:integer ;
+.
+drone:personGender
+  rdf:type rdf:Property ;
+  rdfs:domain drone:Person ;
+  rdfs:range drone:Gender ;
+.
+drone:personID
+  rdf:type rdf:Property ;
+  rdfs:domain drone:Person ;
+  rdfs:range xsd:integer ;
+.
+drone:personName
+  rdf:type rdf:Property ;
+  rdfs:domain drone:Person ;
+  rdfs:range xsd:string ;
+.
+drone:personSurname
+  rdf:type rdf:Property ;
+  rdfs:domain drone:Person ;
+  rdfs:range xsd:string ;
+.
+drone:pulseData
+  rdf:type rdf:Property ;
+  rdfs:domain drone:Pulse ;
+  rdfs:range xsd:integer ;
+.
+drone:stationCity
+  rdf:type rdf:Property ;
+  rdfs:domain drone:Station ;
+  rdfs:range drone:City ;
+.
+drone:stationLocation
+  rdf:type rdf:Property ;
+  rdfs:domain drone:Station ;
+  rdfs:range geo:Point ;
+.
+drone:stationNumberOfRunways
+  rdf:type rdf:Property ;
+  rdfs:domain drone:StationWithRunway ;
+  rdfs:range xsd:integer ;
+.
+drone:stationNumberOfVerticalLandingSpots
+  rdf:type rdf:Property ;
+  rdfs:domain drone:StationWithVerticalLandingSpots ;
+  rdfs:range xsd:integer ;
+.
+drone:stationOwner
+  rdf:type rdf:Property ;
+  rdfs:domain drone:Station ;
+  rdfs:range drone:FlightOperator ;
+.
+drone:temperatureData
+  rdf:type rdf:Property ;
+  rdfs:domain drone:Temperature ;
+  rdfs:range xsd:decimal ;
+.
